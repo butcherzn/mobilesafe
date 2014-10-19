@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="#66ff00"
+        android:gravity="center"
+        android:text="添加黑名单"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/et_black"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="请输入黑名单电话"
+        android:inputType="phone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/cb_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电话拦截" 
+            android:layout_marginRight="20dip"/>
+
+        <CheckBox
+            android:id="@+id/cb_sms"
+            android:layout_marginLeft="20dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="短信拦截"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_enter"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_selector"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

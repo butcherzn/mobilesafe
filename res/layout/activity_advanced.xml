@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="#8866ff00"
+        android:gravity="center"
+        android:text="搞基工具"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/textview_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="numberQuery"
+        android:text="号码归属地查询" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/textview_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="smsBackup"
+        android:text="短信备份" />
+
+       <TextView
+        style="@style/tv_style_setup"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/textview_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="smsRestore"
+        android:text="短信还原" />
+</LinearLayout>

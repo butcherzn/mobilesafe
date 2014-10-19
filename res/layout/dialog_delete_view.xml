@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="#66ff00"
+        android:gravity="center"
+        android:text="是否确定要删除下列号码？"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:text="号码"
+        android:id="@+id/tv_delete_num"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dip"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:background="@drawable/button_selector"
+            android:id="@+id/bt_delete_enter"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="确定" />
+
+        <Button
+            android:background="@drawable/button_selector"
+            android:id="@+id/bt_delete_cancel"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

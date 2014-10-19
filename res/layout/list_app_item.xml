@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="7dip"
+    android:layout_marginRight="7dip"
+    android:layout_marginTop="9dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_marginLeft="5dip"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_app_icon"
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="2dip"
+            android:layout_toRightOf="@+id/iv_app_icon"
+            android:text="手机卫士"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_app_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_app_name"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/iv_app_icon"
+            android:text="手机内存" 
+            android:textSize="10sp"/>
+<!-- 
+        <CheckBox
+            android:id="@+id/cb_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:focusable="false"
+            android:clickable="false"
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_app_icon"
+            android:layout_toLeftOf="@+id/cb_selected"
+            android:text="20.0MB"
+            android:textSize="10sp" />
+ -->
+    </RelativeLayout>
+
+</LinearLayout>

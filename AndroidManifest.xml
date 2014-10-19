@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huyeye.mobilesafe"
+
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+    <!-- 测试 -->
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.huyeye.mobilesafe" >
+    </instrumentation>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <!-- Activity -->
+        <activity
+            android:name="com.huyeye.mobilesafe.activities.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.huyeye.mobilesafe.activities.HomeActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.SettingActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.LostFindActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.Setup1Activity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.Setup2Activity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.Setup3Activity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.Setup4Activity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.SelectContactActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.AdvancedToolsActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.NumberAddressActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.CallSmsSafeActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.AppManagerActivity" />
+        <activity android:name="com.huyeye.mobilesafe.activities.ProcessManagerActivity"/>
+
+        <!-- Broadcast -->
+        <receiver android:name="com.huyeye.mobilesafe.receiver.BootCompleteReceiver" >
+            <intent-filter>
+
+                <!-- 开机启动监听 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- 短信接收 -->
+        <receiver android:name="com.huyeye.mobilesafe.receiver.SmsReceiver" >
+
+            <!-- 短信意图，并设置优先级 -->
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <!-- 管理员 -->
+        <receiver
+            android:name="com.huyeye.mobilesafe.receiver.MyAdmin"
+            android:description="@string/sample_device_admin_description"
+            android:label="@string/sample_device_admin"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 服务 -->
+        <service android:name="com.huyeye.mobilesafe.services.LocationService" />
+        <service android:name="com.huyeye.mobilesafe.services.CallAddressService" />
+        <service android:name="com.huyeye.mobilesafe.services.CallSmsSafeService" />
+    </application>
+
+</manifest>

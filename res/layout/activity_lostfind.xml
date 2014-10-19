@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="#8866ff00"
+        android:gravity="center"
+        android:text="手机防盗功能"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/tv_style_setup"
+            android:text="安全号码" />
+
+        <TextView
+            android:id="@+id/tv_lost_safenum"
+            style="@style/tv_style_setup"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="XX" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="1.3dp"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/tv_style_setup"
+            android:text="防盗保护是否开启" />
+
+        <ImageView
+            android:id="@+id/iv_lost_locked"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/lock" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="1.3dp"
+        android:background="@color/black" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_width="match_parent"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/textview_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="reSetup"
+        android:text="重新进入设置向导" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_width="match_parent"
+        android:layout_marginRight="5dp"
+        android:background="#AFA7A7"
+        android:gravity="center"
+        android:text="功能简介" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="18dp"
+        android:drawableLeft="@android:drawable/star_on"
+        android:text="GPS追踪：#*location*#"
+        android:textSize="20dp" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_gravity="center_vertical"
+        android:drawableLeft="@android:drawable/star_on"
+        android:text="播放报警音乐：#*alarm*#"
+        android:textSize="20dp" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_gravity="center_vertical"
+        android:drawableLeft="@android:drawable/star_on"
+        android:text="远程删除数据：#*wipedata*#"
+        android:textSize="20dp" />
+
+    <TextView
+        style="@style/tv_style_setup"
+        android:layout_gravity="center_vertical"
+        android:drawableLeft="@android:drawable/star_on"
+        android:text="远程锁屏：#*lockscreen*#"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/bt_lost_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="active"
+            android:text="激活" />
+
+        <TextView
+            android:id="@+id/tv_lost_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button1"
+            android:layout_alignBottom="@+id/button1"
+            android:layout_alignParentLeft="true"
+            android:text="注意：自动锁屏和删除数据需要激活"
+            android:textColor="#ff0000"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>
